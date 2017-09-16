@@ -19,6 +19,7 @@
 				onRemoved: '&',
 				onServed: '&'
 			},
+			replace: true,
 			templateUrl: '/customer/customer.html',
 			link: function (scope) {
 

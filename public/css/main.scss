@@ -59,13 +59,13 @@ button {
         & > input, & > select {
             border-radius: 2px;
             border: 1px solid $brand-primary;
-            padding: 6px;
+            padding: 8px;
             font-size: 12px;
         }
 
         & > input {
             width: 35%;
-            height: 12px;
+            height: 15px;
 
             &:focus {
                 outline: none;
@@ -75,7 +75,7 @@ button {
 
         & > select {
             width: 35%;
-            height: 28px;
+            height: 33px;
 
             &:focus {
                 outline: none;
@@ -85,6 +85,7 @@ button {
 
         & > button {
             width: 20%;
+            height: 33px;
         }
     }
 }
@@ -92,10 +93,9 @@ button {
 .CustomerView {
     display: flex;
     min-height: 100%;
-    padding-bottom: 80px;
+    padding-bottom: 62px;
 
     & > .QueueCustomer, & > .ServedCustomer {
-        flex: 1;
         flex-grow: 1;
 
         & > .heading {
@@ -108,12 +108,51 @@ button {
     }
 
     & > .QueueCustomer {
+        box-sizing: border-box;
+        flex: 3;
         border-right: 1px solid $brand-secondary;
         & > ul {
             margin: 0;
-            padding: 14px;
+            padding: 0;
+            padding-top: 14px;
             list-style-type: none;
-            padding-left: 12px;
+
+            & > li {
+                padding: 12px;
+                margin-bottom: 12px;
+
+                &:hover {
+                    background-color: $lighter-color;
+                    color: $dark-color;
+                }
+
+                .info, .actions {
+                    display: inline-block;
+                }
+
+                .info {
+                    width: 59%;
+                }
+
+                .actions {
+                    width: 39%;
+                }
+
+                button {
+                    width: 48%;
+                    height: 33px;
+                }
+            }
+        }
+    }
+
+    & > .ServedCustomer {
+        flex: 2;
+        & > ol {
+            & > li {
+                padding: 2px;
+                margin-bottom: 6px;
+            }
         }
     }
 }
