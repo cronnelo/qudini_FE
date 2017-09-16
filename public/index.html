@@ -18,19 +18,27 @@
 			<add-customer on-added="onCustomerAdded()"></add-customer>
 		</div>
 
-		<h2 class="heading">Queueing Customers</h2>
-		<ul>
-			<li ng-repeat="customer in customers">
-				<customer customer="customer" on-served="onCustomerServed()" on-removed="onCustomerRemoved()"></customer>
-			</li>
-		</ul>
+		<section class="CustomerView">
+			<div class="QueueCustomer">
+				<h3 class="heading">Queueing Customers</h3>
+				<ul>
+					<li ng-repeat="customer in customers">
+						<customer customer="customer" on-served="onCustomerServed()" on-removed="onCustomerRemoved()"></customer>
+					</li>
+				</ul>
 
-		<h2 class="heading">Served customers</h2>
-		<ul>
-			<li ng-repeat="customer in customersServed">
-				<customer customer="customer"></customer>
-			</li>
-		</ul>
+			</div>
+			<div class="ServedCustomer">
+				<h3 class="heading">Served customers</h3>
+				<ul>
+					<li ng-repeat="customer in customersServed">
+						<customer customer="customer"></customer>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+
 
 	</body>
 </html>
