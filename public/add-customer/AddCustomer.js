@@ -21,11 +21,16 @@
 				];
 
 				scope.addCustomer = function () {
+					var params = {
+						name: scope.name,
+						product: scope.product
+					}
 
+					$http.post('/api/customer/add', params)
+						.then(scope.onAdded)
 				};
-
 			}
 		}
-	};
+	}
 
 })();
