@@ -23,7 +23,7 @@
     "start": "node server",
     "dev": "nodemon server",
     "build": "node-sass -o public/css public/css",
-    "sass": "node-sass -w public/css -o public/css",
+    "sass": "node-sass -w public/css/main.scss -o public/css",
     "postinstall": "bower install --config.cwd=./public"
   }
 }

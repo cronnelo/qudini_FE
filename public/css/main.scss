@@ -1,8 +1,18 @@
+$brand-primary: #57BC90;
+$brand-secondary: #77C9D4;
+$text-color: #015249;
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     background-color: #f5f5f3;
     font-family: 'Droid Sans', sans-serif;
     margin: 0 auto;
     padding-bottom: 100px;
+    color: $text-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,7 +27,44 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     width: 100%;
 
-    & > .heading, & .AddCustomer {
+    & > .heading {
         display: inline-block;
+        width: 20%;
+    }
+
+    & > .AddCustomer {
+        display: inline-block;
+        width: 79%;
+
+        & > input, & > select {
+            border-radius: 2px;
+            border: 1px solid $brand-primary;
+            padding: 6px;
+            font-size: 12px;
+        }
+
+        & > input {
+            width: 35%;
+            height: 12px;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 2px $text-color;
+            }
+        }
+
+        & > select {
+            width: 35%;
+            height: 28px;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 2px $text-color;
+            }
+        }
+
+        & > button {
+            width: 20%;
+        }
     }
 }
