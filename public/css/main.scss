@@ -1,6 +1,9 @@
 $brand-primary: #57BC90;
 $brand-secondary: #77C9D4;
-$text-color: #015249;
+$text-color: rgba(0, 0, 0, 0.8);
+$dark-color: #015249;
+$light-color: #00bcd4 ;
+$lighter-color: #ccf2f6;
 
 * {
     -webkit-font-smoothing: antialiased;
@@ -17,6 +20,17 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
+}
+
+button {
+    color: $lighter-color;
+    background-color: $light-color;
+    border: 0;
+    height: 26px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 1px;
 }
 
 .AddCustomerContainer {
