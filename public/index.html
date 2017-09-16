@@ -2,6 +2,8 @@
 <html>
 	<head lang="en">
 		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
 		<title>Queue App</title>
 		<link rel="stylesheet" href="css/main.css">
 		<script src="/bower_components/angularjs/angular.js"></script>
@@ -11,17 +13,19 @@
 	</head>
 	<body ng-app="qudini.QueueApp" ng-controller="QueueController">
 
-		<h2>Add Customer</h2>
-		<add-customer on-added="onCustomerAdded()"></add-customer>
+		<div class="AddCustomerContainer">
+			<h2 class="heading">Add Customer</h2>
+			<add-customer on-added="onCustomerAdded()"></add-customer>
+		</div>
 
-		<h2>Queueing Customers</h2>
+		<h2 class="heading">Queueing Customers</h2>
 		<ul>
 			<li ng-repeat="customer in customers">
 				<customer customer="customer" on-served="onCustomerServed()" on-removed="onCustomerRemoved()"></customer>
 			</li>
 		</ul>
 
-		<h2>Served customers</h2>
+		<h2 class="heading">Served customers</h2>
 		<ul>
 			<li ng-repeat="customer in customersServed">
 				<customer customer="customer"></customer>

@@ -11,6 +11,7 @@
 			scope: {
 				onAdded: '&'
 			},
+			replace: true,
 			templateUrl: '/add-customer/add-customer.html',
 			link: function (scope) {
 

@@ -1,5 +1,23 @@
 body {
-    background-color: #eaeaea;
+    background-color: #f5f5f3;
+    font-family: 'Droid Sans', sans-serif;
+    margin: 0 auto;
+    padding-bottom: 100px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+}
 
+.AddCustomerContainer {
+    padding: 8px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    & > .heading, & .AddCustomer {
+        display: inline-block;
+    }
+}
