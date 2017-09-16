@@ -26,12 +26,12 @@
 				scope.queuedTime = new Date() - new Date(scope.customer.joinedTime);
 
 				scope.remove = function () {
-          var params = { id: scope.customer.id };
-          $http
-            .delete('/api/customer/remove', { params: params })
-            .then(function () {
-              scope.onRemoved();
-            });
+					var params = { id: scope.customer.id };
+
+					$http.delete('/api/customer/remove', { params: params })
+						.then(function () {
+							scope.onRemoved();
+						});
 				};
 
 			}
