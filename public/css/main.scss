@@ -37,9 +37,10 @@ button {
 }
 
 .AddCustomerContainer {
-    padding: 8px 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
     background-color: #ffffff;
-    box-shadow: 0 2px 4px;
+    box-shadow: 0 2px 6px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -48,6 +49,7 @@ button {
     & > .heading {
         display: inline-block;
         width: 20%;
+        margin: 18px 0px;
     }
 
     & > .AddCustomer {
