@@ -25,6 +25,11 @@
 				// calculate how long the customer has queued for
 				scope.queuedTime = new Date() - new Date(scope.customer.joinedTime);
 
+				scope.serveCustomer = function (customerId) {
+					$http.put('/api/customer/serve', { id: customerId })
+						.then(scope.onServed);
+				}
+
 				scope.remove = function () {
 					var params = { id: scope.customer.id };
 
