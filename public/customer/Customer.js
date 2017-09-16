@@ -1,6 +1,6 @@
 (function () {
 
-	angular.module('qudini.QueueApp', [])
+	angular.module('qudini.QueueApp')
 		.directive('customer', Customer);
 
 	Customer.$inject = ['$http'];
@@ -26,11 +26,12 @@
 				scope.queuedTime = new Date() - new Date(scope.customer.joinedTime);
 
 				scope.remove = function () {
-					$http.delete('/api/customer/remove', { params: {
-						id: scope.customer.id
-					} }).then(function (res) {
-						scope.onRemoved();
-					});
+          var params = { id: scope.customer.id };
+          $http
+            .delete('/api/customer/remove', { params: params })
+            .then(function () {
+              scope.onRemoved();
+            });
 				};
 
 			}
