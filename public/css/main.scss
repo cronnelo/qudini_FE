@@ -173,6 +173,10 @@ button {
         background-color: #eafcff;
 
         & > .list {
+            display: flex;
+            flex-direction: column-reverse;
+            padding-left: 42px;
+
             & > li {
                 padding: 4px 12px 4px 2px;
                 margin-bottom: 6px;
