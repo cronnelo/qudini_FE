@@ -140,6 +140,10 @@ button {
                     color: $dark-color;
                 }
 
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
                 .info, .actions {
                     display: inline-block;
                 }
