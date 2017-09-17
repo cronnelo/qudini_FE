@@ -66,6 +66,7 @@ button {
     & > .AddCustomer {
         display: inline-block;
         width: 79%;
+        text-align: justify;
 
         & > input, & > select {
             width: calc(35% - 12px);
@@ -90,7 +91,7 @@ button {
         }
 
         & > button {
-            width: 20%;
+            width: 24%;
             height: 33px;
         }
     }
