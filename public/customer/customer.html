@@ -5,7 +5,7 @@
 		<span>{{ customer.queuedTime }}</span>
 	</div>
 	<div class="actions" ng-if="customer.status !== 'served'">
-		<button ng-click="serveCustomer(customer.id)">Serve</button>
-		<button ng-click="remove()">Remove</button>
+		<button class="btn-secondary" ng-click="remove()">Remove</button>
+		<button class="btn-primary" ng-click="serveCustomer(customer.id)">Serve</button>
 	</div>
 </div>

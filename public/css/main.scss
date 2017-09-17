@@ -4,6 +4,8 @@ $text-color: rgba(0, 0, 0, 0.8);
 $dark-color: #015249;
 $light-color: #00bcd4 ;
 $lighter-color: #ccf2f6;
+$greenish: #009688;
+$greenish-light: #bfe6e4;
 
 * {
     -webkit-font-smoothing: antialiased;
@@ -26,14 +28,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button {
-    color: $lighter-color;
-    background-color: $light-color;
     border: 0;
-    height: 26px;
+    height: 33px;
     cursor: pointer;
     border-radius: 4px;
     font-size: 12px;
     padding: 1px;
+    width: 40%;
+
+    &.btn-primary {
+        background-color: $light-color;
+        color: $lighter-color;
+    }
+
+    &.btn-secondary {
+        background-color: $greenish;
+        color: $greenish-light;
+    }
 }
 
 .AddCustomerContainer {
@@ -133,9 +144,13 @@ button {
                     width: 39%;
                 }
 
-                button {
-                    width: 48%;
-                    height: 33px;
+                .btn-primary {
+                    width: calc(50%);
+                }
+
+                .btn-secondary {
+                    width: calc(40% - 8px);
+                    margin-right: 8px;
                 }
             }
         }
