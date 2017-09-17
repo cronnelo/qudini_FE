@@ -4,7 +4,7 @@
 		<span class="product">{{ customer.product.name }}</span>
 		<span class="queuedTime"
 			ng-if="customer.status !=='served'"
-			ng-bind="queuedTime | date: 'mediumTime'"></span>
+			ng-bind="queuedTime | date: 'HH:mm:ss'"></span>
 	</div>
 	<div class="actions" ng-if="customer.status !== 'served'">
 		<button class="btn-secondary" ng-click="remove()">Remove</button>

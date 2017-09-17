@@ -3,7 +3,7 @@
 	angular.module('qudini.QueueApp')
 		.directive('customer', Customer);
 
-	Customer.$inject = ['$http'];
+	Customer.$inject = ['$http', '$interval'];
 
 	/**
 	* The <customer> directive is responsible for:
@@ -11,7 +11,7 @@
 	* - calculating queued time
 	* - removing customer from the queue
 	*/
-	function Customer($http) {
+	function Customer($http, $interval) {
 		return {
 			restrict: 'E',
 			scope: {
@@ -23,8 +23,12 @@
 			templateUrl: '/customer/customer.html',
 			link: function (scope) {
 
+				var joinedTime = new Date(scope.customer.joinedTime);
+
 				// calculate how long the customer has queued for
-				scope.queuedTime = new Date() - new Date(scope.customer.joinedTime);
+				$interval(function () {
+					scope.queuedTime = new Date() - joinedTime;
+				}, 1000)
 
 				scope.serveCustomer = function (customerId) {
 					$http.put('/api/customer/serve', { id: customerId })
