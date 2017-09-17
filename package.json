@@ -17,12 +17,18 @@
     "node-uuid": "^1.4.3"
   },
   "devDependencies": {
-    "bower": "^1.8.0"
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8"
   },
   "scripts": {
     "start": "node server",
     "dev": "nodemon server",
-    "build": "node-sass -o public/css public/css",
+    "build": "gulp build",
     "sass": "node-sass -w public/css/main.scss -o public/css",
     "postinstall": "bower install --config.cwd=./public"
   }
