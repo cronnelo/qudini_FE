@@ -158,9 +158,9 @@ button {
 
     & > .ServedCustomer {
         flex: 2;
-        & > ol {
+        & > .list {
             & > li {
-                padding: 2px;
+                padding: 4px 2px;
                 margin-bottom: 6px;
             }
         }
