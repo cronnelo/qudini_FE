@@ -57,30 +57,25 @@ button {
         width: 79%;
 
         & > input, & > select {
+            width: calc(35% - 12px);
             border-radius: 2px;
             border: 1px solid $brand-primary;
             padding: 8px;
+            margin-right: 12px;
             font-size: 12px;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 5px $brand-primary;
+            }
         }
 
         & > input {
-            width: 35%;
             height: 15px;
-
-            &:focus {
-                outline: none;
-                box-shadow: 0 0 2px $text-color;
-            }
         }
 
         & > select {
-            width: 35%;
             height: 33px;
-
-            &:focus {
-                outline: none;
-                box-shadow: 0 0 2px $text-color;
-            }
         }
 
         & > button {
